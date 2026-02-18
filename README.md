@@ -22,5 +22,20 @@ Production of structure for the project using GIT Bash
 
 <img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
 
-index.html file being created( My example for this project was a Tech Review company )
+index.html file being created( My example for this project was a Tech Review company)
+
+<img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/472dbdef-037d-4157-b369-6f622c45c686" />
+
+Produced a Dockerfile by essentially making a text file and remove the txt exentsion you can also achieve this via bash(git bash)
+
+<img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/e51676d0-76d2-4990-abf6-5e454e723f09" />
+
+Commands put into Dockerfile(has to be named this exactly), this copies index.html to the nginx image
+
+ALTERNATIVE METHOD
+
+
+Demonstration of achieving this via bash
+
+
 **Cleanup and Cost Management**
