@@ -20,5 +20,7 @@ Image of devops container folder being created
 
 Production of structure for the project using GIT Bash
 
+<img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
 
+index.html file being created( My example for this project was a Tech Review company )
 **Cleanup and Cost Management**
