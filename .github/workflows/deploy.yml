@@ -24,16 +24,16 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/devops-demo:${{ github.sha }} ./app
+        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/Azure-Terraform-CI-CD-Pipeline-Project:${{ github.sha }} ./app
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.ACR_LOGIN_SERVER }}/devops-demo:${{ github.sha }}
+        docker push ${{ secrets.ACR_LOGIN_SERVER }}/Azure-Terraform-CI-CD-Pipeline-Project:${{ github.sha }}
 
     - name: Deploy to Azure Web App
       run: |
         az webapp config container set \
-          --name devops-container-app-123 \
-          --resource-group devops-rg \
-          --docker-custom-image-name ${{ secrets.ACR_LOGIN_SERVER }}/devops-demo:${{ github.sha }} \
+          --name lkreviews-container-app \
+          --resource-group Lk_res \
+          --docker-custom-image-name ${{ secrets.ACR_LOGIN_SERVER }}/Azure-Terraform-CI-CD-Pipeline-Project:${{ github.sha }} \
           --docker-registry-server-url https://${{ secrets.ACR_LOGIN_SERVER }}
