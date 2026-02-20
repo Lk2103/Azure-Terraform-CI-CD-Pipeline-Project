@@ -24,16 +24,16 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/lkreviews-container-app:${{ Latest }} ./app
+        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/lkreviews-container-app:${{lkreviews-demo}} ./app
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.ACR_LOGIN_SERVER }}/lkreviews-container-app:${{ Latest }}
+        docker push ${{ secrets.ACR_LOGIN_SERVER }}/lkreviews-container-app:${{lkreviews-demo}}
 
     - name: Deploy to Azure Web App
       run: |
         az webapp config container set \
           --name lkreviews-container-app \
           --resource-group Lk_res \
-          --docker-custom-image-name ${{ secrets.ACR_LOGIN_SERVER }}/lkreviews-container-app:${{ Latest }} \
+          --docker-custom-image-name ${{ secrets.ACR_LOGIN_SERVER }}/lkreviews-container-app:${{lkreviews-demo}} \
           --docker-registry-server-url https://${{ secrets.ACR_LOGIN_SERVER }}
