@@ -37,5 +37,34 @@ ALTERNATIVE METHOD
 
 Demonstration of achieving this via bash
 
+error that occurred was I shouldnt have included tags within the docker file
+
+<img width="958" height="1007" alt="image" src="https://github.com/user-attachments/assets/45b438ce-d84a-4f95-8d52-894b24e1275b" />
+Above shows locally testing the Dockerfile
+
+<img width="1919" height="982" alt="image" src="https://github.com/user-attachments/assets/8c4c5d01-a515-4319-a174-9d1ceb612e98" />
+
+above shows the actual testing as you can see the local testing was sucessful, I connected via a browser using http://local host:8080
+
+next was to go to azure
+
+<img width="1919" height="827" alt="image" src="https://github.com/user-attachments/assets/e1e2feab-94de-4ca2-8e0e-3a18cfcdb523" />
+
+above shows using azure container registry I will be using a premade general main resource group(Lk_Res)
+
+<img width="1919" height="830" alt="image" src="https://github.com/user-attachments/assets/802c2646-126e-4890-9086-e39b8fda7bc4" />
+
+Issues occured above shows first there was no caps allowed second was that my subscription did not have container registry service(az means using azure CLI)
+
+<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/3ddec6e5-4aac-433f-af58-8c0d389af22b" />
+
+above shows the troubleshooting page
+
+One of the other issues that occured was that I was missing multiple subscription resource providers. below shows a screenshot of me registring for one of these resource providers.
+
+<img width="1919" height="827" alt="image" src="https://github.com/user-attachments/assets/2c7a152e-6c72-4573-aeca-b8a118f96582" />
+
+I then produced a Azure Container Registry along with updating the registry to ensure admin permissions are enabled 
+
 
 **Cleanup and Cost Management**
