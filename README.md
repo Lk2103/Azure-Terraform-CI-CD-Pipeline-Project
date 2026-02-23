@@ -64,7 +64,42 @@ One of the other issues that occured was that I was missing multiple subscriptio
 
 <img width="1919" height="827" alt="image" src="https://github.com/user-attachments/assets/2c7a152e-6c72-4573-aeca-b8a118f96582" />
 
-I then produced a Azure Container Registry along with updating the registry to ensure admin permissions are enabled 
+I then produced a Azure Container Registry(acr) along with updating the registry to ensure admin permissions are enabled 
+
+I then created a service plan for the Web Application
+
+<img width="946" height="197" alt="image" src="https://github.com/user-attachments/assets/e4621928-2eab-487e-a8a3-85d9b49443e8" />
+
+then created a webapp using the previously provisioned resources and plans
+
+Produced a contributor role allowing data to be accessed from github
+
+<img width="1270" height="113" alt="image" src="https://github.com/user-attachments/assets/24748c87-b82c-400a-bb5c-893b13496450" />
+
+needed to get ACR credentials for github actions(allowing deploy.yml to function correctly)
+az acr credential show
+--name lkreviewsregistry
+as well as copying the JSON file content resulted from the following commands:
+az acr show \
+--resource-group Lk_res \
+--name lkreviewsregistry
+
+after this in my local lkreviews-container-app folder I created a deploy.yml, this file gave instructions in what needed to be carried out for the project to work
+
+<img width="1919" height="1005" alt="image" src="https://github.com/user-attachments/assets/3d0981aa-ada6-4fe5-9669-8e7b48e8612f" />
+
+This information needed to be copied over to the github repository i was using
+
+using git bash I first changed the directory to the location of my local project folder(lkreviews-container-app), then git add ., then git commit -m "intial commit" as shown below
+**Clarifcation**
+git init produces a .git file(stands for initialze)
+
+git add . specfies that all following files should be added to this directory
+
+git commit -m "Initial commit" saves a snapshot -m standing for message
+
+<img width="941" height="850" alt="image" src="https://github.com/user-attachments/assets/98839037-6361-4734-91bf-5429f547436a" />
+
 
 
 **Cleanup and Cost Management**
