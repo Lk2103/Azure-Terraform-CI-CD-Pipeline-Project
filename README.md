@@ -1,24 +1,59 @@
-# Azure-Terraform-CI-CD-Pipeline-Project
+# Azure-CI-CD-Pipeline-With-Docker Project
 
 Azure terraform and CI/CD Pipeline example using Azure web app
 
 **Project Overview**
-
+This project demonstrates how the use of CI/CD pipeline to automate the build and deployment of a containerized web application using Github Actions and Azure Container Registry(ACR).This was a challenging project for where I learnt a lot.
 **Architecture/Design decisions**
-**Issues Encountered**
+
+Deployment Flow:
+
+Local folder development --> Github Repository configuration --> Azure Container Registry --> Azure web app and required resources creation
+
+
+Containerization: Docker
+
+CI/CD: GitHub Actions
+
+Container Registry: Azure Container Registry(ACR)
+
+Host and cloud provider: Azure
+
 **What I learnt**
+Application containerization
+For this demonstration I had produced a demo Tech Review Website, I used Docker to containerize this website.
 
-<img width="957" height="1024" alt="image" src="https://github.com/user-attachments/assets/2bc8428e-c203-415e-b5e0-5c2447870b02" />
+Production of Dockerfile
+<img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/1964127e-8ee2-4322-8bfe-75c41921d40e" />
 
-Image of the console and the making of a directory(Folder) (Named Devops-Container-App)
+I tested the container locally by using the following commands
 
-<img width="327" height="45" alt="image" src="https://github.com/user-attachments/assets/b7f83d39-fd5d-4829-9923-f850d47fcd43" />
+docker build -t lkreviews-container-app
+docker run -p 8080:80 lkreviews-container-app
 
-Image of devops container folder being created
+CHECK
 
-<img width="421" height="181" alt="image" src="https://github.com/user-attachments/assets/67ea4b9b-bcab-4106-a7d7-1d8e310b56b4" />
+Design of CI/CD pipeline
 
-Production of structure for the project using GIT Bash
+CI/CD workflow configured using GitHub Actions
+
+Pipeline steps
+
+1. Push to main branch(pipeline only runs when you push to main)
+
+<img width="911" height="571" alt="image" src="https://github.com/user-attachments/assets/39f14264-7a93-4613-a471-ae10cbdd89ff" />
+
+
+
+3. Authenticate to azure using github service principal credentials
+
+4. Log into Azure Container Registry
+
+5. Build Docker Image
+
+6. Tag Image using "Latest"
+
+7. P 
 
 <img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
 
