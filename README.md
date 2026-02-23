@@ -100,6 +100,8 @@ git commit -m "Initial commit" saves a snapshot -m standing for message
 
 <img width="941" height="850" alt="image" src="https://github.com/user-attachments/assets/98839037-6361-4734-91bf-5429f547436a" />
 
+Final Result website running automated deployment through github workflows successfully
 
+<img width="1919" height="826" alt="image" src="https://github.com/user-attachments/assets/919e925e-e7fb-427d-a2da-e39e410f4199" />
 
 **Cleanup and Cost Management**
