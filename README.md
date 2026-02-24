@@ -1,6 +1,6 @@
 # Azure-CI-CD-Pipeline-With-Docker Project
 
-Azure terraform and CI/CD Pipeline example using Azure web app
+Azure CI/CD pipeline example using Azure Web App and Docker for containerization
 
 **Project Overview**
 This project demonstrates how the use of a CI/CD pipeline to automate the build and deployment of a containerized web application using GitHub Actions and Azure Container Registry(ACR). This was a challenging project for where I learnt a great deal about automation and cloud deployment.
