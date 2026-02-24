@@ -3,7 +3,7 @@
 Azure terraform and CI/CD Pipeline example using Azure web app
 
 **Project Overview**
-This project demonstrates how the use of CI/CD pipeline to automate the build and deployment of a containerized web application using Github Actions and Azure Container Registry(ACR).This was a challenging project for where I learnt a lot.
+This project demonstrates how the use of a CI/CD pipeline to automate the build and deployment of a containerized web application using Github Actions and Azure Container Registry(ACR). This was a challenging project for where I learnt a great deal about automation and cloud deployment.
 
 **Architecture/Design decisions**
 Preperation: 
@@ -28,8 +28,7 @@ Host and cloud provider: Azure
 **What I learnt**
 
 **Application containerization**
-For this demonstration I had produced a demo Tech Review Website, I used Docker to containerize this website.
-
+For this demonstration I produced a demo tech review website and used Docker to containerize the application.
 **Production of Dockerfile**
 <img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/1964127e-8ee2-4322-8bfe-75c41921d40e" />
 
@@ -52,7 +51,7 @@ Pipeline steps
 
 2. Authenticate to azure using github service principal credentials
 
-3. Log into Azure Container Registry wuthout this this project cannot be completed due to errors which will occur
+3. Log into Azure Container Registry without thisstep, the project cannot be completed due to authentication errors.
 
 Commands: az acr login --name Lkreviewsregistry
 
@@ -60,7 +59,7 @@ Commands: az acr login --name Lkreviewsregistry
 
 <img width="958" height="1007" alt="image" src="https://github.com/user-attachments/assets/45b438ce-d84a-4f95-8d52-894b24e1275b" />
 
-Important to locally testing the Dockerfile
+It is important to locally test the Dockerfile before deploying
 
 <img width="1919" height="982" alt="image" src="https://github.com/user-attachments/assets/8c4c5d01-a515-4319-a174-9d1ceb612e98" />
 
@@ -68,7 +67,7 @@ I connected via a browser using http://local host:8080
 
 5. Image tagged(lkreviews_demo)
 
-Essentially keeps track of the image version as a demonstration I named this Lkreviews_demo but, under a longer project I would rename this to v1 if required but, putting ${{github.sha}} automatically assigns a tag
+The image tag helps track version. For this demonstration I used Lkreviews_demo. In a larger project, I would rename this to v1 and keep a consistent sequence or I would put ${{github.sha}} which automatically assigns a tag
 
 6. Image is then pushed to ACR
 
