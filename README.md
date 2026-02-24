@@ -52,7 +52,15 @@ Commands: az acr login --name Lkreviewsregistry
 
 4. Build Docker Image(Previously shown)
  
-5. Image tagged(latest) essentially keeps the project organised
+5. Image tagged(lkreviews_demo)
+
+Essentially keeps track of the image version as a demonstration i named this Lkreviews_demo but, under a longer project I would rename this to v1 if required but, putting ${{github.sha}} automatically assigns a tag
+
+6. Image is then pushed to ACR
+
+This was done automatically as part of the pipeline the section of code that this relates to is
+
+<img width="1205" height="94" alt="image" src="https://github.com/user-attachments/assets/6d4718eb-c604-4a1c-837f-509747cf4c0d" />
 
 
 
