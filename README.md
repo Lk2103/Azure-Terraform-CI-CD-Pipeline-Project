@@ -66,6 +66,7 @@ This was done automatically as part of the pipeline the section of code that thi
 
 <img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
 
+**Web App Configuration
 index.html file being created( My example for this project was a Tech Review company)
 
 <img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/472dbdef-037d-4157-b369-6f622c45c686" />
