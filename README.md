@@ -89,6 +89,8 @@ I created a Contributor role assignment to allow GitHub to securely access Azure
 
 <img width="1270" height="113" alt="image" src="https://GitHub.com/user-attachments/assets/24748c87-b82c-400a-bb5c-893b13496450"/>
 
+????????????????????????????????????????????????????????????????????????????
+
 needed to get ACR credentials for GitHub actions(allowing deploy.yml to function correctly)
 az acr credential show
 --name lkreviewsregistry
@@ -99,7 +101,7 @@ az acr show \
 
 In my local lkreviews-container-app folder I created a deploy.yml, this file gave instructions in what needed to be carried out for the project to work
 
-<img width="1919" height="1005" alt="image" src="https://GitHub.com/user-attachments/assets/3d0981aa-ada6-4fe5-9669-8e7b48e8612f"/>
+<img width="1919" height="1005" alt="deploy" src="https://github.com/user-attachments/assets/88f93a11-04dd-4a39-ada7-75ecff9260c2" />
 
 This information needed to be copied over to the GitHub repository i was using
 
@@ -112,9 +114,9 @@ git add . specfies that all following files should be added to this directory
 
 git commit -m "Initial commit" saves a snapshot
 
-<img width="941" height="850" alt="image" src="https://GitHub.com/user-attachments/assets/98839037-6361-4734-91bf-5429f547436a"/>
+<img width="941" height="850" alt="upload" src="https://github.com/user-attachments/assets/dc1bf9e4-1935-4607-bb9e-019933af2f6e" />
 
-<img width="1172" height="868" alt="image" src="https://GitHub.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe"/>
+<img width="1172" height="868" alt="index" src="https://github.com/user-attachments/assets/db8e0017-42e5-46e7-9056-723689cfc54b" />
 
 index.html file being created( My example for this project was a Tech Review company)
 
@@ -122,21 +124,21 @@ index.html file being created( My example for this project was a Tech Review com
 
 Error that occurred was I shouldnt have included tags within the docker file
 
-<img width="1919" height="830" alt="image" src="https://GitHub.com/user-attachments/assets/802c2646-126e-4890-9086-e39b8fda7bc4"/>
+<img width="1919" height="830" alt="Issue" src="https://github.com/user-attachments/assets/30adc78c-9c94-4fb9-967e-2b44478529ad" />
 
 Above shows two errors one being that the name of the credentials was case sensitive and the second error saying missing subscription registration
 
-<img width="1919" height="1009" alt="image" src="https://GitHub.com/user-attachments/assets/3ddec6e5-4aac-433f-af58-8c0d389af22b"/>
+<img width="1919" height="1009" alt="Troubleshoot" src="https://github.com/user-attachments/assets/55388776-99f3-4427-84c2-6713399dc304" />
 
 As this was my first time troubleshooting an error like this I did some reserach using microsoft resources to help identify the solution.
 
 The solution was to go to the resource provider within the subscription settings. I later discovered other registry's were missing such as Active Directory.
 
-<img width="1919" height="827" alt="image" src="https://GitHub.com/user-attachments/assets/2c7a152e-6c72-4573-aeca-b8a118f96582"/>
+<img width="1919" height="827" alt="Azure sub 1" src="https://github.com/user-attachments/assets/aa3fa498-f9ee-4108-8ed2-dc3489a87b54" />
 
 **Final Product**
 Result was website running automated deployment through GitHub workflows successfully
 
-<img width="1919" height="826" alt="image" src="https://GitHub.com/user-attachments/assets/919e925e-e7fb-427d-a2da-e39e410f4199"/>
+<img width="1919" height="826" alt="Web final" src="https://github.com/user-attachments/assets/d46c9ba9-e7cc-45de-83d3-6807493f610b" />
 
 **Cleanup and Cost Management**
