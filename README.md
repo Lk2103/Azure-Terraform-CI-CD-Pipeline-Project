@@ -3,19 +3,20 @@
 Azure CI/CD pipeline example using Azure Web App and Docker for containerization
 
 **Project Overview**
+
 This project demonstrates how the use of a CI/CD pipeline to automate the build and deployment of a containerized web application using GitHub Actions and Azure Container Registry(ACR). This was a challenging project for where I learnt a great deal about automation and cloud deployment.
 
 **Architecture/Design decisions**
+
 Preparation: 
 
 <img width="1919" height="827" alt="container registry" src="https://github.com/user-attachments/assets/4d698b64-c433-44af-8a77-921d79c71ce8" />
 
-above shows using Azure container registry I will be using a premade general main resource group(Lk_Res)
+Above shows using Azure container registry I will be using a premade general main resource group(Lk_Res)
 
 Deployment Flow:
 
 Local folder development --> GitHub Repository configuration --> Azure Container Registry --> Azure web app and required resources creation
-
 
 Containerization: Docker
 
@@ -100,7 +101,7 @@ In my local lkreviews-container-app folder I created a deploy.yml, this file gav
 
 This information needed to be copied over to the GitHub repository i was using
 
-using git bash I first changed the directory to the location of my local project folder(lkreviews-container-app), then git add ., then git commit -m "initial commit" as shown below
+Using git bash I first changed the directory to the location of my local project folder(lkreviews-container-app), then git add ., then git commit -m "initial commit" as shown below
 
 **Clarification**
 git init produces a .git file(stands for initialize)
