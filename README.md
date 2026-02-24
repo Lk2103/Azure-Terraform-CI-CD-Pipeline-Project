@@ -52,7 +52,7 @@ Pipeline steps
 
 2. Authenticate to azure using github service principal credentials
 
-3. Log into Azure Container Registry wuthout this this project cannot be completed de to errors which will occur
+3. Log into Azure Container Registry wuthout this this project cannot be completed due to errors which will occur
 
 Commands: az acr login --name Lkreviewsregistry
 
@@ -78,37 +78,15 @@ This was done automatically as part of the pipeline the section of code that thi
 
 **Web App Configuration**
 
-<img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
-
-index.html file being created( My example for this project was a Tech Review company)
-
-**Issues Encountered**
-
-Error that occurred was I shouldnt have included tags within the docker file
-
-<img width="1919" height="830" alt="image" src="https://github.com/user-attachments/assets/802c2646-126e-4890-9086-e39b8fda7bc4" />
-
-Above shows two errors one being that the name of the credentials was case sensitive and the second error saying missing subscription registration
-
-<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/3ddec6e5-4aac-433f-af58-8c0d389af22b" />
-
-As this was my first time troubleshooting an error like this I did some reserach using microsoft resources to help identify the solution.
-
-The solution was to go to the resource provider
-
-One of the other issues that occured was that I was missing multiple subscription resource providers. below shows a screenshot of me registring for one of these resource providers.
-
-<img width="1919" height="827" alt="image" src="https://github.com/user-attachments/assets/2c7a152e-6c72-4573-aeca-b8a118f96582" />
-
 I then produced a Azure Container Registry(acr) along with updating the registry to ensure admin permissions are enabled 
 
 I then created a service plan for the Web Application
 
 <img width="946" height="197" alt="image" src="https://github.com/user-attachments/assets/e4621928-2eab-487e-a8a3-85d9b49443e8" />
 
-then created a webapp using the previously provisioned resources and plans
+Created a webapp using the previously provisioned resources and plans
 
-Produced a contributor role allowing data to be accessed from github
+Produced a contributor role allowing data to be accessed from github securely
 
 <img width="1270" height="113" alt="image" src="https://github.com/user-attachments/assets/24748c87-b82c-400a-bb5c-893b13496450" />
 
@@ -137,7 +115,28 @@ git commit -m "Initial commit" saves a snapshot -m standing for message
 
 <img width="941" height="850" alt="image" src="https://github.com/user-attachments/assets/98839037-6361-4734-91bf-5429f547436a" />
 
-Final Result website running automated deployment through github workflows successfully
+<img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
+
+index.html file being created( My example for this project was a Tech Review company)
+
+**Issues Encountered**
+
+Error that occurred was I shouldnt have included tags within the docker file
+
+<img width="1919" height="830" alt="image" src="https://github.com/user-attachments/assets/802c2646-126e-4890-9086-e39b8fda7bc4" />
+
+Above shows two errors one being that the name of the credentials was case sensitive and the second error saying missing subscription registration
+
+<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/3ddec6e5-4aac-433f-af58-8c0d389af22b" />
+
+As this was my first time troubleshooting an error like this I did some reserach using microsoft resources to help identify the solution.
+
+The solution was to go to the resource provider within the subscription settings. I later discovered other registry's were missing such as Active Directory.
+
+<img width="1919" height="827" alt="image" src="https://github.com/user-attachments/assets/2c7a152e-6c72-4573-aeca-b8a118f96582" />
+
+**Final Product**
+Result was website running automated deployment through github workflows successfully
 
 <img width="1919" height="826" alt="image" src="https://github.com/user-attachments/assets/919e925e-e7fb-427d-a2da-e39e410f4199" />
 
