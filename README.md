@@ -20,10 +20,11 @@ Container Registry: Azure Container Registry(ACR)
 Host and cloud provider: Azure
 
 **What I learnt**
-Application containerization
+
+**Application containerization**
 For this demonstration I had produced a demo Tech Review Website, I used Docker to containerize this website.
 
-Production of Dockerfile
+**Production of Dockerfile**
 <img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/1964127e-8ee2-4322-8bfe-75c41921d40e" />
 
 I tested the container locally by using the following commands
@@ -33,7 +34,7 @@ docker run -p 8080:80 lkreviews-container-app
 
 CHECK
 
-Design of CI/CD pipeline
+**Design of CI/CD pipeline**
 
 CI/CD workflow configured using GitHub Actions
 
@@ -43,17 +44,17 @@ Pipeline steps
 
 <img width="911" height="571" alt="image" src="https://github.com/user-attachments/assets/39f14264-7a93-4613-a471-ae10cbdd89ff" />
 
+2. Authenticate to azure using github service principal credentials
+
+3. Log into Azure Container Registry wuthout this this project cannot be completed de to errors which will occur
+
+Commands: az acr login --name Lkreviewsregistry
+
+4. Build Docker Image(Previously shown)
+ 
+5. Image tagged(latest) essentially keeps the project organised
 
 
-3. Authenticate to azure using github service principal credentials
-
-4. Log into Azure Container Registry
-
-5. Build Docker Image
-
-6. Tag Image using "Latest"
-
-7. P 
 
 <img width="1172" height="868" alt="image" src="https://github.com/user-attachments/assets/038bdfaf-e385-40e6-92bc-681de2356bfe" />
 
@@ -66,11 +67,6 @@ Produced a Dockerfile by essentially making a text file and remove the txt exent
 <img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/e51676d0-76d2-4990-abf6-5e454e723f09" />
 
 Commands put into Dockerfile(has to be named this exactly), this copies index.html to the nginx image
-
-ALTERNATIVE METHOD
-
-
-Demonstration of achieving this via bash
 
 error that occurred was I shouldnt have included tags within the docker file
 
@@ -119,13 +115,14 @@ az acr show \
 --resource-group Lk_res \
 --name lkreviewsregistry
 
-after this in my local lkreviews-container-app folder I created a deploy.yml, this file gave instructions in what needed to be carried out for the project to work
+In my local lkreviews-container-app folder I created a deploy.yml, this file gave instructions in what needed to be carried out for the project to work
 
 <img width="1919" height="1005" alt="image" src="https://github.com/user-attachments/assets/3d0981aa-ada6-4fe5-9669-8e7b48e8612f" />
 
 This information needed to be copied over to the github repository i was using
 
 using git bash I first changed the directory to the location of my local project folder(lkreviews-container-app), then git add ., then git commit -m "intial commit" as shown below
+
 **Clarifcation**
 git init produces a .git file(stands for initialze)
 
